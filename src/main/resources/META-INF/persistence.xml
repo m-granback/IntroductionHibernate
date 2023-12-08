@@ -7,11 +7,13 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
             <!--            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>-->
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/pentagon?serverTimezone=UTC"/>
-            <property name="javax.persistence.jdbc.user" value="your_login_name"/>
-            <property name="javax.persistence.jdbc.password" value="your_password"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://verran.se:3306/pentagon?serverTimezone=UTC"/>
+            <property name="javax.persistence.jdbc.user" value="bill"/>
+            <property name="javax.persistence.jdbc.password" value="clinton"/>
             <property name="hibernate.show_sql" value="false"/> <!-- Ändra denna till true för att se sql-kommandon -->
             <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+            <property name="javax.persistence.sql-load-script-source" value="META-INF/data.sql"/>
+<!--            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>-->
         </properties>
     </persistence-unit>
 </persistence>

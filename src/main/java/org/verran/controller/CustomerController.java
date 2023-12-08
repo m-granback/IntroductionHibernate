@@ -135,8 +135,9 @@ public class CustomerController {
         try {
             transaction = entityManager.getTransaction();
             transaction.begin();
+            Customer customerToDelete = entityManager.find(Customer.class, id);
             // If the entity is attached then remove customer, else merge(attach/update) entity and then remove
-            entityManager.remove(entityManager.contains(id) ? id : entityManager.merge(id));
+            entityManager.remove(entityManager.contains(customerToDelete) ? customerToDelete : entityManager.merge(customerToDelete));
             transaction.commit();
             return true;
         } catch (Exception e){

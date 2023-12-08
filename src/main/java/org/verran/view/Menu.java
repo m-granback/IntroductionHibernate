@@ -136,6 +136,7 @@ public class Menu {
     }
 
     private void addCustomersAndCars() {
+        // This is not the typical way of adding data to the database, use data.sql instead
         List<Customer> customersToAdd = new ArrayList<>();
         List<Car> carsToAdd = new ArrayList<>();
         customersToAdd.addAll(List.of(
